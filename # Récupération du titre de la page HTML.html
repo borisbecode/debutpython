@@ -1,0 +1,21 @@
+# Récupération du titre de la page HTML >> soup.title
+<title><Les chiens les plus mignons></title>
+
+# Récupération de la chaîne de caractères du titre HTML >> soup.title.string
+"Les chiens les plus mignons" # Trouver tous les éléments avec la balise
+<a>
+  >>soup.find_all('a') [
+  <a href="http://exemple.com/labradoodle" class="race" id="lien1"
+    >LabraDoodle</a
+  >,
+  <a href="http://exemple.com/retriever" class="race" id="lien2"
+    >Golden Retriever</a
+  >, <a href="http://exemple.com/carlin" class="race" id="lien3">Carlin</a>] #
+  Trouver les éléments avec l’id du « lien1 » >> soup.find(id="lien1")
+  <a href="http://exemple.com/labradoodle" class="race" id="lien1"
+    >LabraDoodle</a
+  >
+
+  #Trouver tous les éléments p avec la classe « title » >> soup.find_all("p",
+  class_="title") "Les meilleures races de chiens"</a
+>
