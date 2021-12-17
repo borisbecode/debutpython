@@ -6,7 +6,7 @@ while True:
     computer = possibility[randint(0,2)]
     player = input("rock , paper or scissors? (or stop the game?) ").lower()
     print("computer choice : ",computer)
-    print("virgin choice : " , player)
+    print("playerchoice : " , player)
 
 
     if player == "stop the game":

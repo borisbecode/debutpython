@@ -3,11 +3,17 @@
 https://www.youtube.com/watch?v=h6jciR8K43E
 https://www.youtube.com/watch?v=Y-wXK0Wu5pc&t=710s
 
-### Pour penser Orienté Object il faut :
+# https://replit.com/@bisbis/pythonyoutube2h#main.py
 
-La personne Type ( ==L'entité== -> ==ce qui va definir la # classe== ) :
-----Les objets de la personne ( ==Son nom , Sa taille, Son age== )
----- Les actions de la personne ( ==Ce qu'elle fait ou ce qu'elle va faire== ) --> ==Se sont les # méthodes==
+# Pour penser Orienté Object il faut :
+
+## L'object Parent Type qui comprend ( ==L'entité== -> ==ce qui va definir la # classe== ) :
+
+## ---- Le constructeur , def--init-- , ==qui contient les self==
+
+## ----Les objets de la personne ( ==Son nom , Sa taille, Son age== )
+
+## ---- Les actions de la personne ( ==Ce qu'elle fait ou ce qu'elle va faire== ) --> ==Se sont les # méthodes==
 
 Exemple pour creer un object , on l'appelle de cette maniere :
 
@@ -44,9 +50,76 @@ class Car():
         long_name = str(self.year) + " " + self.make + " " + self.model
         return long_name.title()
 
-Nomdunouvelobjetenfant = Car('Chevy', 'sonic', 2015)
+Enfant1 = Car('Chevy', 'sonic', 2015)
 
-print(my_new_car.get_descriptive_name())
+print(Enfant1.get_descriptive_name())
 ```
 
-### ==au dessus on peut voir nomdunouvelobject qui appelle lobjet parent et choisi ses propres charactéristiques== # debutpython
+### ==au dessus on peut voir Enfant1 qui appelle lobjet parent et choisi ses propres charactéristiques==
+
+## autre exemple :
+
+```self
+class Personne:
+  def __init__(self,nom,age,color):
+    self.nom = nom
+    self.age = age
+    self.color = color
+    print("salut ")
+
+
+  def sepresenter(self):
+
+
+    print("je mappelle " + self.nom + " j'ai " + self.age +" ans , ma couleur préférée est " + self.color)
+
+  def autrefonction():
+    print("ceci est une methode de classe")
+
+
+
+```
+
+personne2 = Personne("boris","30","bleu") -> personne2 devant un enfant de personne avec ses caracteristiques
+personne2.sepresenter() -> on appelle la fonction sepresenter avec ses propres carac, grace au self
+==sortie -> je mappelle boris j'ai 30 ans , ma couleur préférée est bleu==
+
+Personne.autrefonction() -> ici pas de self , on appelle la fonction qu'on a mis dans l'object .
+
+```
+
+# On peut alterer le nom de l object enfant ->
+
+personne2.nom = 'igor'
+
+personne2.sepresenter()
+
+OUTPUT : je mappelle ==igor== j'ai 30 ans , ma couleur préférée est bleu
+
+
+```
+
+On peut appeller une fonction de la classe parent dans une autre , exemple ::::
+
+```
+
+class Personne:
+  def __init__(self,nom,age,color):
+    self.nom = nom
+    self.age = age
+    self.color = color
+    print("salut ")
+
+
+  def sepresenter(self):
+
+    print("je mappelle " + self.nom + " j'ai " + self.age +" ans , ma couleur préférée est " + self.color)
+    if self.Estmajeur()
+        print("je suis majeur")
+    --->>>>> la fonction Estmajeur est appellée avec le self Estmajeur .
+
+  def Estmajeur():
+    return self.age>=18
+
+
+```
